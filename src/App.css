@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap');
+
+:root{
+  --bg: rgba(52,51,51,0.4);
+  --bg0: rgba(40,38,38,0.4);
+  --color: rgba(165,163,163,0.4);
+}
+
+
+body{
+  background-color: black;
+  color: white;
+  font-family: 'Livvic', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 25px;
+}
+.name{
+  display: flex;
+  flex-direction: row;
+}
+
+.search{
+  width: 600px;
+  height: 30px;
+  background-color: var(--bg);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 5px;
+  padding-left: 30px;
+  margin-right: 12px;
+}
+input{
+  background-color: transparent;
+  border: none;
+  position: relative;
+  top: -6px;
+  width: 300px;
+  color: white;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  position: relative;
+  top: -7px;
+  color: lightgray;
+  left: 50px;
+  margin-left: 20px;
+}
+button:hover{
+  background-color: var(--bg);
+  color: white;
+  cursor: pointer;
+}
+button:active{
+  background-color: var(--bg0);
+  cursor: pointer;
+}
+/*main */
+.main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 20px;
+}
+
+.side-section{
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px;
+}
+.tempdata{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--bg);
+  width: 250px;
+  height: 220px;
+  border-radius: 25px;
+}
+
+.tempval{
+  display: flex;
+  gap: 7px;
+}
+.status{
+  border-bottom: 2px solid var(--bg0);
+}
+.coord{
+  display: flex;
+  flex-direction: column;
+}
+.val{
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+.temp{
+  display: flex;
+  flex-direction: row;
+  font-size: 36px;
+  justify-content: space-between;
+  align-items: center;
+}
+.value{
+  font-size: 55px;
+  font-weight: bold;
+}
+.status{
+  font-size: 15px;
+  padding: 10px 0px;
+  border-radius: 2px solid rgba(41, 40, 40, 0.2);
+}
+.text{
+  display: flex;
+  gap: 7px;
+}
+.side-section{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.other{
+
+}
+
+.forecasts{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 40px;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.forecast::-webkit-scrollbar {
+  display: none;
+}
+
+
+.details{
+  width: 950px;
+  height: 500px;
+  background-color: var(--bg0);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+.component{
+  width: 420px;
+  height: 140px;
+  background-color: rgb(32, 30, 30);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 25px;
+  margin: 10px;
+}
+.parts{
+  display: flex;
+  justify-content: space-between;
+}
+.part{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.val{
+  font-size: 20px;
+}
+
+.parts1{
+  display: flex;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast{
+  display: flex;
+  margin: 10px;
+}
+.data{
+  display: flex;
+  background-color: rgb(32, 30, 30);
+  margin: 7px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 300px;
+  height: 250px;
+  border-radius: 25px;
+}
+.date{
+  border-radius: 25px;
+  font-size: 10px;
+}
+.others{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.other{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
