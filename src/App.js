@@ -30,6 +30,49 @@ import GrainOutlinedIcon from '@mui/icons-material/GrainOutlined';
 import { useEffect, useState } from 'react';
 
 function App() {
+
+
+  const [logo , setLogo] = useState('');
+  useEffect(()=>{
+    const texts = [
+      'Weatherly',
+      'Search City',
+      'Check current',
+    ]
+    let textsindex = 0;
+    let charindex = 0;
+    let typetimer , backtimer;
+
+    const type = () =>{
+      if(charindex<=texts[textsindex].length){
+        setLogo(texts[textsindex].slice(0,charindex));
+        charindex++;
+        typetimer = setTimeout(type , 100);
+      }
+      else{
+        backtimer = setTimeout(backspace , 1000);
+      }
+    }
+    const backspace = () =>{
+      if(charindex>0){
+        setLogo(texts[textsindex].slice(0,charindex));
+        charindex--;
+        backtimer = setTimeout(backspace , 50);
+      }
+      else{
+        textsindex = (textsindex+1) %3;
+        typetimer = setTimeout(type , 100);
+      }
+    }
+    type();
+
+    return () =>{
+      clearTimeout(typetimer);
+      clearTimeout(backtimer);
+    };
+  },[])
+
+
   const [cityName, setCityName] = useState('');
   const [data, setData] = useState(null);
   const [forecasts, setForecasts] = useState(null);
@@ -158,7 +201,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <div className="name">Weatherly</div>
+        <div className="name">{logo}</div>
         <div className="search">
           <SearchOutlinedIcon style={{ fontSize: "20", marginLeft: "-10", marginRight: "10" }} />
           <input type="text" placeholder='Enter cityname ...' value={cityName}
