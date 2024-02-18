@@ -77,7 +77,7 @@ function App() {
   const [data, setData] = useState(null);
   const [forecasts, setForecasts] = useState(null);
 
-  const apiKey = '651ce41f9ed2d27bb56553cad7676b52';
+  const apiKey = '';//api key here not placed as gets exposed openweather api
 
   const apiUrl1 = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
   const apiUrl2 = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
